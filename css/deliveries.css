@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #F4F6FB;
+    color: #1a1d2e;
+}
+
+.container { display: flex; min-height: 100vh; }
+
+/* ---- MAIN ---- */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* ---- PAGE HEADER ---- */
+.page-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a1d2e;
+    margin-bottom: 4px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: #9399a6;
+    margin-bottom: 2rem;
+}
+
+/* ---- STATS ---- */
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #e8eaf0;
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+}
+
+.stat-card h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9399a6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1d2e;
+    line-height: 1;
+}
+
+.stat-card .stat-badge {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+}
+
+.stat-card.total   .stat-badge { background: #EEF1FD; color: #4361EE; }
+.stat-card.pending .stat-badge { background: #FFF4E5; color: #C07A00; }
+.stat-card.transit .stat-badge { background: #E5F2FF; color: #0070C9; }
+.stat-card.done    .stat-badge { background: #E6F9F1; color: #0B7A4E; }
+
+/* ---- CARD ---- */
+.modern-card {
+    background: #fff;
+    border: 1px solid #e8eaf0;
+    border-radius: 14px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.modern-card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1d2e;
+    margin-bottom: 1.25rem;
+}
+
+/* ---- FORM ---- */
+.delivery-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.delivery-form input,
+.delivery-form select {
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #dde1ea;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1a1d2e;
+    background: #F8F9FC;
+    outline: none;
+    transition: border 0.15s, box-shadow 0.15s;
+}
+
+.delivery-form input:focus,
+.delivery-form select:focus {
+    border-color: #4361EE;
+    box-shadow: 0 0 0 3px rgba(67,97,238,0.1);
+    background: #fff;
+}
+
+.delivery-form input::placeholder { color: #b0b7c3; }
+
+.delivery-form .form-full {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.delivery-form .form-full input,
+.delivery-form .form-full select {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* ---- BUTTON ---- */
+.modern-btn {
+    height: 40px;
+    padding: 0 24px;
+    background: #4361EE;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.modern-btn:hover  { background: #3451d1; }
+.modern-btn:active { transform: scale(0.98); }
+
+/* ---- TABLE TOOLBAR ---- */
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.table-toolbar h2 { margin-bottom: 0; }
+
+.search-input {
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #dde1ea;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1a1d2e;
+    background: #F8F9FC;
+    outline: none;
+    width: 200px;
+    transition: border 0.15s;
+}
+
+.search-input:focus { border-color: #4361EE; background: #fff; }
+
+/* ---- TABLE ---- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+thead { background: #F8F9FC; }
+
+th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: #9399a6;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #e8eaf0;
+}
+
+td {
+    padding: 13px 14px;
+    color: #3b3f52;
+    border-bottom: 1px solid #f1f3f8;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: #F8F9FC; }
+
+.tracking-code {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #4361EE;
+    background: #EEF1FD;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+/* ---- STATUS BADGES ---- */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-pending     { background: #FFF4E5; color: #C07A00; }
+.status-on-delivery { background: #E5F2FF; color: #0070C9; }
+.status-delivered   { background: #E6F9F1; color: #0B7A4E; }
+
+/* ---- EMPTY STATE ---- */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #b0b7c3;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .stats-box { grid-template-columns: repeat(2, 1fr); }
+    .delivery-form { grid-template-columns: 1fr 1fr; }
+    .main { margin-left: 0; padding: 20px; }
+}
+
+.action-buttons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.btn-edit,
+.btn-delete{
+
+    height:44px;
+
+    padding:0 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+}
+
+.btn-edit{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.btn-delete{
+    background:#fee2e2;
+    color:#dc2626;
+}
+.edit-select{
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    min-width: 180px;
+}
+
+.edit-status-form{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.status-dropdown{
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    border:1px solid #dbeafe;
+
+    background:white;
+
+    font-size:15px;
+
+    outline:none;
+
+    min-width:180px;
+
+    font-family:'Poppins', sans-serif;
+}
+
+.edit-status-form{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.status-dropdown{
+    height:44px;
+    padding:0 16px;
+    border-radius:14px;
+    border:1px solid #dbeafe;
+    background:white;
+    font-size:14px;
+    outline:none;
+    min-width:170px;
+    font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+.action-buttons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.btn-edit,
+.btn-delete{
+    height:44px;
+    padding:0 18px;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    border:none;
+    cursor:pointer;
+}
+
+.btn-edit{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.btn-delete{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+
+.action-cell{
+    min-width: 320px;
+}
+
+.action-buttons{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.edit-inline{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.status-select{
+    height:44px;
+    padding:0 14px;
+    border-radius:14px;
+    border:1px solid #dbeafe;
+    font-size:14px;
+    min-width:170px;
+    outline:none;
+    background:white;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-cancel{
+
+    height:44px;
+
+    padding:0 18px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+.btn-edit{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.btn-delete{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.btn-cancel{
+    background:#f1f5f9;
+    color:#475569;
+}
+
+.edit-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.status-dropdown{
+    padding:12px 18px;
+    border-radius:16px;
+    border:1px solid #dbe4f3;
+    font-size:15px;
+    background:white;
+}
+
+.btn-save{
+    background:#cfe0ff;
+    color:#2563eb;
+    border:none;
+    padding:12px 20px;
+    border-radius:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn-cancel{
+    background:#f8d7da;
+    color:#dc2626;
+    padding:12px 20px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:600;
+}

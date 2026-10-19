@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8fbff, #eef4ff, #dbeafe);
+    min-height: 100vh;
+}
+
+
+/* ===== MAIN ===== */
+
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+/* ===== TITLE ===== */
+
+.title {
+    font-size: 55px;
+    color: #0f172a;
+    margin-bottom: 30px;
+}
+
+
+/* ===== SEARCH ===== */
+
+.search-bar {
+    margin-bottom: 25px;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 16px 20px;
+    border-radius: 18px;
+    border: 1px solid #dbeafe;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+
+/* ===== BOX ===== */
+
+.receiver-box {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 35px rgba(37,99,235,0.08);
+}
+
+
+/* ===== FORM ===== */
+
+.receiver-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.receiver-form input {
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid #dbeafe;
+    font-size: 15px;
+    outline: none;
+}
+
+.receiver-form input:focus {
+    border-color: #2563eb;
+}
+
+.receiver-form button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.receiver-form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ===== TABLE ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    text-align: left;
+    padding: 18px;
+    color: #64748b;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 20px 18px;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+}
+
+tr:hover { background: #f8fbff; }
+
+
+/* ===== ACTION ===== */
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 10px 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-edit   { background: #2563eb; }
+.btn-delete { background: #ef4444; }
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+table input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    font-size: 15px;
+    background: white;
+    box-sizing: border-box;
+    outline: none;
+}
+
+table input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.action-buttons button {
+    border: none;
+    cursor: pointer;
+}

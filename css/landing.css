@@ -1,0 +1,186 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f8faff;
+    min-height: 100vh;
+    color: #0f172a;
+}
+
+/* ========== NAVBAR - biru ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: linear-gradient(135deg, #1e60f0, #1a4fd6);
+    box-shadow: 0 4px 24px rgba(30,96,240,0.2);
+}
+
+.logo { display: flex; align-items: center; gap: 16px; }
+
+.logo-icon {
+    width: 58px; height: 58px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+    display: flex; align-items: center; justify-content: center;
+}
+.logo-icon img { width: 40px; height: 40px; object-fit: contain; }
+
+.logo-text h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px; font-weight: 700;
+    color: white; letter-spacing: 0.2px; line-height: 1;
+}
+.logo-text p {
+    font-size: 11px; color: rgba(255,255,255,0.6);
+    font-weight: 400; margin-top: 4px;
+    letter-spacing: 0.9px; text-transform: uppercase;
+}
+
+.menu { display: flex; align-items: center; gap: 10px; }
+.menu-login {
+    text-decoration: none; color: white;
+    font-weight: 600; font-size: 14px;
+    padding: 9px 22px; border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: background 0.2s;
+}
+.menu-login:hover { background: rgba(255,255,255,0.12); }
+.menu-signup {
+    text-decoration: none;
+    background: white; color: #1848c7;
+    font-weight: 700; font-size: 14px;
+    padding: 9px 22px; border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.menu-signup:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.16); }
+
+/* ========== HERO - background putih/terang ========== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 60px 60px;
+    gap: 40px;
+    background: #f8faff;
+    /* Subtle blue blob di kanan atas */
+    background-image:
+        radial-gradient(ellipse at 95% 5%, rgba(37,99,235,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 5% 95%, rgba(147,197,253,0.07) 0%, transparent 40%);
+}
+
+.hero-left { width: 52%; }
+
+.badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    font-size: 13px; font-weight: 600;
+    padding: 8px 18px; border-radius: 999px;
+    margin-bottom: 28px;
+}
+
+.hero-left h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 66px; font-weight: 800;
+    line-height: 1.05; color: #0f172a;
+    letter-spacing: -2px; margin-bottom: 20px;
+}
+.highlight {
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-left p {
+    font-size: 17px; line-height: 1.85;
+    color: #64748b; max-width: 480px;
+}
+
+/* ========== HERO RIGHT ========== */
+.hero-right { width: 46%; display: flex; justify-content: center; }
+
+.img-wrapper {
+    position: relative;
+    width: 420px; height: 380px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* Lingkaran biru lembut di belakang gambar */
+.img-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #dbeafe 0%, #eff6ff 55%, transparent 75%);
+}
+
+.img-wrapper img {
+    width: 290px; position: relative; z-index: 1;
+    animation: bob 4s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(37,99,235,0.18));
+}
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+.float-card {
+    position: absolute; background: white;
+    border-radius: 14px; padding: 10px 16px;
+    font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border: 1px solid #f1f5f9;
+    z-index: 2; animation: fadeSlide 0.7s ease both;
+}
+.card-1 { top: 30px; right: 10px; color: #16a34a; animation-delay: 0.3s; }
+.card-1 i { font-size: 17px; color: #16a34a; }
+.card-2 { bottom: 60px; left: 10px; color: #2563eb; animation-delay: 0.5s; }
+.card-2 i { font-size: 17px; color: #2563eb; }
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== FEATURES SECTION - biru di sini ========== */
+.features-section {
+    background: linear-gradient(135deg, #1e60f0, #1a4fd6);
+    padding: 32px 60px;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+}
+
+.feature {
+    display: flex; align-items: center;
+    gap: 16px; flex: 1;
+    white-space: nowrap;
+}
+
+.feature-icon-wrap {
+    width: 48px; height: 48px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; flex-shrink: 0;
+}
+
+.feature-title { font-size: 15px; font-weight: 700; color: white; }
+.feature-sub   { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 3px; }
+
+.feat-divider {
+    width: 1px; height: 50px;
+    background: rgba(255,255,255,0.2);
+    flex-shrink: 0; margin: 0 32px;
+}

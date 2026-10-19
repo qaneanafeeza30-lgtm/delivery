@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7ff;
+    color: #111827;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+    display: flex;
+    padding: 0;
+    gap: 0;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    width: 260px;
+    background: white;
+    border-radius: 0;
+    padding: 18px 0;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+
+    box-sizing: border-box;
+}
+
+
+/* USER */
+.user {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 0 18px;
+}
+
+.avatar {
+    width: 72px;
+    height: 72px;
+    background: #2563eb;
+    border-radius: 22px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.user p {
+    color: #64748b;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* MENU LINKS */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 16px 28px;
+
+    text-decoration: none;
+    color: #475569;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+
+    transition: 0.2s;
+}
+
+.sidebar a i {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.sidebar a:hover {
+    background: #f1f5f9;
+    color: #2563eb;
+}
+
+.sidebar a.active {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* LOGOUT */
+.sidebar a.logout {
+    margin-top: auto;
+
+    margin-bottom: 18px;
+
+    background: #ef4444;
+    color: white !important;
+
+    border-radius: 18px;
+
+    width: 85%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-content: center;
+
+    height: 52px;
+
+    padding: 0;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar a.logout:hover {
+    background: #dc2626;
+}
+
+/* ========== MAIN ========== */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 32px 36px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ========== HERO ========== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    border-radius: 35px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #eef5ff, #dbeafe);
+}
+
+.hero h1 { font-size: 60px; margin: 0; color: #0f172a; }
+.hero p   { font-size: 22px; color: #64748b; margin-top: 10px; }
+
+.welcome-box {
+    background: white;
+    padding: 14px 22px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.welcome-box i { color: #2563eb; font-size: 20px; }
+
+/* ========== CARDS ========== */
+.cards { display: flex; gap: 25px; margin-bottom: 30px; }
+
+.card {
+    flex: 1;
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    width: 70px; height: 70px;
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icon i { font-size: 32px; }
+
+.blue   { background: #dbeafe; color: #2563eb; }
+.green  { background: #dcfce7; color: #16a34a; }
+.purple { background: #f3e8ff; color: #9333ea; }
+
+.card h3  { color: #64748b; }
+.card p   { font-size: 50px; margin: 10px 0; color: #2563eb; font-weight: bold; }
+.card span { color: #94a3b8; }
+
+/* ========== TABLE BOX ========== */
+.table-box {
+    margin-top: 30px;
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.search {
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #dbeafe;
+}
+
+.search-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+/* ===== DELIVERY TABLE ===== */
+
+.delivery-table {
+    margin-top: 20px;
+}
+
+
+.delivery-head,
+.delivery-row {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    align-items: center;
+}
+
+
+.delivery-head {
+
+    background: #eef4ff;
+
+    padding: 22px 28px;
+
+    border-radius: 22px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #64748b;
+
+    letter-spacing: 1px;
+}
+
+
+.delivery-row {
+
+    background: white;
+
+    padding: 22px 28px;
+
+    border-radius: 20px;
+
+    margin-top: 14px;
+
+    color: #334155;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+
+.delivery-empty {
+
+    padding: 30px;
+
+    color: #94a3b8;
+}

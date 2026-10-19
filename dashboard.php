@@ -9,7 +9,7 @@ if(!isset($_SESSION['login'])){
     exit;
 }
 
-include __DIR__ . '/config/databse.php';
+include __DIR__ . '/config/database.php';
 
 $couriers = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM couriers"));
 $packages = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM packages"));

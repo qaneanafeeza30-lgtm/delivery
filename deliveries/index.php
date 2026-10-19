@@ -9,7 +9,7 @@ if(!isset($_SESSION['login'])){
     exit;
 }
 
-include __DIR__ . '/../config/databse.php';
+include __DIR__ . '/../config/database.php';
 /* ================= ADD ================= */
 
 if(isset($_POST['add'])){

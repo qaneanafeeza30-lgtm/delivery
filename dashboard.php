@@ -101,13 +101,14 @@ $deliveries = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM deliveries"));
 
     </a>
 
-<a href="/delivery_express/delivery_express/logout.php"
+
+<a href="logout.php"
    class="logout"
    onclick="return confirm('Are you sure you want to logout?')">
-
-    <span>Logout</span>
-
+    <i class="ri-logout-box-line"></i>
+    Logout
 </a>
+
 </div>
 
 

@@ -2,19 +2,29 @@
 session_start();
 include('config/database.php');
 
+
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $result = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
+    $result = mysqli_query(
+        $conn,
+        "SELECT * FROM users
+        WHERE username='$username'
+        AND password='$password'"
+    );
 
     if (mysqli_num_rows($result) > 0) {
+        $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
-        header("Location: index.php");
+
+        header("Location: dashboard.php");
+        exit;
     } else {
         $error = "Invalid username or password!";
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +64,7 @@ if (isset($_POST['login'])) {
                         class="w-full px-4 py-3 rounded-xl bg-blue-50/50 border border-transparent focus:border-blue-500 focus:bg-white focus:outline-none transition-all text-gray-700">
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="***" required 
+                    <input type="password" name="password" placeholder="*" required 
                         class="w-full px-4 py-3 rounded-xl bg-blue-50/50 border border-transparent focus:border-blue-500 focus:bg-white focus:outline-none transition-all text-gray-700">
                 </div>
 

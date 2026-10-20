@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '/../config/databse.php';
+include __DIR__ . '/../config/database.php';
 
 
 /* ADD */
